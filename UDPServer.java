@@ -25,6 +25,7 @@ public class UDPServer{
             InetAddress IPAddress = receivePacket.getAddress();
             int port = receivePacket.getPort();
             String capitalizedSentence = sentence.toUpperCase();
+            String dataS;
             sendData = capitalizedSentence.getBytes();
             DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
             serverSocket.send(sendPacket);
